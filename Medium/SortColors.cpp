@@ -18,7 +18,6 @@ public:
             swap(nums[h],nums[m]);
             h--;
         }
-
     }
         
     }
