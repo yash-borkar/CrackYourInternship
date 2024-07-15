@@ -15,5 +15,5 @@ Welcome to my 45-day #CrackYourInternship journey! This repository documents my 
 In addition to this challenge, I'm also continuing my studies in Spring Boot to enhance my backend development skills. This dual approach will help me become a well-rounded developer.
 
 🙌 Follow Along
-Feel free to follow my journey and provide any advice or words of encouragement. Your support means a lot!
-Connect with me on LinkedIn: https://www.linkedin.com/in/yashborkar/
+- Feel free to follow my journey and provide any advice or words of encouragement. Your support means a lot!
+- Connect with me on LinkedIn: https://www.linkedin.com/in/yashborkar/
