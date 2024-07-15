@@ -12,7 +12,7 @@ Welcome to my 45-day #CrackYourInternship journey! This repository documents my 
 - Prepare for technical interviews
   
 📚 Additional Learning
-In addition to this challenge, I'm also continuing my studies in Spring Boot to enhance my backend development skills. This dual approach will help me become a well-rounded developer.
+- In addition to this challenge, I'm also continuing my studies in Spring Boot to enhance my backend development skills. This dual approach will help me become a well-rounded developer.
 
 🙌 Follow Along
 - Feel free to provide any advice or words of encouragement. Your support means a lot!
