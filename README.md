@@ -3,7 +3,7 @@ Welcome to my 45-day #CrackYourInternship journey! This repository documents my 
 
 📅 Challenge Overview
 - Duration: 45 Days
-- Total Questions: 270
+- Total Questions: 280+
 - Daily Goal: 6 Questions
 
 🎯 Goals
