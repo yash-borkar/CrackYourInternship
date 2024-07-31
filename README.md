@@ -1,5 +1,5 @@
 # CrackYourInternship
-Welcome to my 45-day #CrackYourInternship journey! This repository documents my progress as I tackle 270 DSA (Data Structures and Algorithms) questions from Arsh Goyal's sheet. My goal is to solve 6 questions each day, pushing myself to learn and grow.
+Welcome to my 45-day #CrackYourInternship journey! This repository documents my progress as I tackle 280+ DSA (Data Structures and Algorithms) questions from Arsh Goyal's sheet. My goal is to solve 6 questions each day, pushing myself to learn and grow.
 
 📅 Challenge Overview
 - Duration: 45 Days
