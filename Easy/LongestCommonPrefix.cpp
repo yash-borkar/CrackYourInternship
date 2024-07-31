@@ -14,9 +14,14 @@ public:
             else return ans;
         }
         return ans;
+    }
+};
 
+/* ------------------------------------------------------------------------------------------------------------------------ */
 
-        // 2.
+class Solution {
+public:
+    string longestCommonPrefix(vector<string>& strs) {
         int n=strs.size();
         int mini=strs[0].size();
         for(int i=0;i<n-1;i++)
@@ -37,7 +42,5 @@ public:
             return "";
         else 
             return (strs[0].substr(0,mini));
-            
-
     }
 };

@@ -3,8 +3,6 @@ https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string
 class Solution {
 public:
     int strStr(string haystack, string needle) {
-
-        // 1.
         if(needle.size()>haystack.size()) return -1;
         int index=0;
         int start=0;
@@ -22,9 +20,14 @@ public:
             if(index-i==needle.size()) return start;
         }
         return -1;
+    }
+};
 
+/* ------------------------------------------------------------------------------------------------------------------------ */
 
-        // 2.
+class Solution {
+public:
+    int strStr(string haystack, string needle) {
         if(needle.size()>haystack.size()) return -1;
         int n = haystack.size();
         int m = needle.size();

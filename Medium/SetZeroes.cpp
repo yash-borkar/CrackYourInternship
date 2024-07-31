@@ -1,64 +1,107 @@
+https://leetcode.com/problems/set-matrix-zeroes/description/
+
 class Solution {
 public:
-    // void markRow(vector<vector<int>>& matrix, int i, int n, int m){
-    //     for(int j=0; j<m; j++){
-    //         if(matrix[i][j] != 0) matrix[i][j] = -1;
-    //     }
-    // }
+    void markRow(vector<vector<int>>& matrix, int i, int n, int m){
+        for(int j=0; j<m; j++){
+            if(matrix[i][j] != 0) matrix[i][j] = -1;
+        }
+    }
 
-    // void markCol(vector<vector<int>>& matrix, int j, int n, int m){
-    //     for(int i=0; i<n; i++){
-    //         if(matrix[i][j] != 0) matrix[i][j] = -1;
-    //     }
-    // }
+    void markCol(vector<vector<int>>& matrix, int j, int n, int m){
+        for(int i=0; i<n; i++){
+            if(matrix[i][j] != 0) matrix[i][j] = -1;
+        }
+    }
 
     void setZeroes(vector<vector<int>>& matrix) {
         int n = matrix.size();
         int m = matrix[0].size();
 
-    //  1. Brute Force - O(n^3)
+     1. Brute Force - O(n^3)
 
-    //     for(int i=0; i<n; i++){
-    //         for(int j=0; j<m; j++){
-    //             if(matrix[i][j] == 0){
-    //                 markRow(matrix, i, n, m);
-    //                 markCol(matrix, j, n, m);
-    //             }
-    //         }
-    //     }
+        for(int i=0; i<n; i++){
+            for(int j=0; j<m; j++){
+                if(matrix[i][j] == 0){
+                    markRow(matrix, i, n, m);
+                    markCol(matrix, j, n, m);
+                }
+            }
+        }
 
-    //     // Replace -1 with 0
-    //     for(int i=0; i<n; i++){
-    //         for(int j=0; j<m; j++){
-    //             if(matrix[i][j] == -1) matrix[i][j] = 0;
-    //         }
-    //     }    
+        // Replace -1 with 0
+        for(int i=0; i<n; i++){
+            for(int j=0; j<m; j++){
+                if(matrix[i][j] == -1) matrix[i][j] = 0;
+            }
+        }
+    }
+};  
 
+/* ------------------------------------------------------------------------------------------------------------------------ */
 
-    // 2. Better - O(n^2)
+class Solution {
+public:
+    void markRow(vector<vector<int>>& matrix, int i, int n, int m){
+        for(int j=0; j<m; j++){
+            if(matrix[i][j] != 0) matrix[i][j] = -1;
+        }
+    }
 
-        // vector<int>row(n, 0);
-        // vector<int>col(m, 0);
+    void markCol(vector<vector<int>>& matrix, int j, int n, int m){
+        for(int i=0; i<n; i++){
+            if(matrix[i][j] != 0) matrix[i][j] = -1;
+        }
+    }
 
-        // for(int i=0; i<n; i++){
-        //     for(int j=0; j<m; j++){
-        //         if(matrix[i][j] == 0){
-        //             row[i] = 1;
-        //             col[j] = 1;
-        //         }
-        //     }        
-        // }
+    void setZeroes(vector<vector<int>>& matrix) {
+        int n = matrix.size();
+        int m = matrix[0].size();
 
-        // for(int i=0; i<n; i++){
-        //     for(int j=0; j<m; j++){
-        //         if(row[i] == 1 || col[j] == 1){
-        //             matrix[i][j] = 0;
-        //         }
-        //     }        
-        // }
+        // Better - O(n^2)
+        vector<int>row(n, 0);
+        vector<int>col(m, 0);
 
+        for(int i=0; i<n; i++){
+            for(int j=0; j<m; j++){
+                if(matrix[i][j] == 0){
+                    row[i] = 1;
+                    col[j] = 1;
+                }
+            }        
+        }
 
-    // 3. Optimal - O(n^2)
+        for(int i=0; i<n; i++){
+            for(int j=0; j<m; j++){
+                if(row[i] == 1 || col[j] == 1){
+                    matrix[i][j] = 0;
+                }
+            }        
+        }
+    }
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------ */
+
+class Solution {
+public:
+    void markRow(vector<vector<int>>& matrix, int i, int n, int m){
+        for(int j=0; j<m; j++){
+            if(matrix[i][j] != 0) matrix[i][j] = -1;
+        }
+    }
+
+    void markCol(vector<vector<int>>& matrix, int j, int n, int m){
+        for(int i=0; i<n; i++){
+            if(matrix[i][j] != 0) matrix[i][j] = -1;
+        }
+    }
+
+    void setZeroes(vector<vector<int>>& matrix) {
+        int n = matrix.size();
+        int m = matrix[0].size();
+
+        // Optimal - O(n^2)
 
         // vector<int>row(n, 0);  -->  matrix[][0]  
         // vector<int>col(m, 0);  -->  matrix[0][]

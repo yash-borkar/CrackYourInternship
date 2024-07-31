@@ -14,8 +14,6 @@ public:
             }
             else minn=prices[i]; 
         }
-        return finalAns;
-        
+        return finalAns;       
     }
-
 };

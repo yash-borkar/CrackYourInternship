@@ -17,7 +17,6 @@ public:
             if(mp.find(rem)!=mp.end()) ans+=mp[rem];
             mp[rem]++;
         }
-
         return ans;
     }
 };

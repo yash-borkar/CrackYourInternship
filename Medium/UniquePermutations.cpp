@@ -2,6 +2,28 @@ https://www.geeksforgeeks.org/problems/all-unique-permutations-of-an-array/0
 
 class Solution {
   public:
+    vector<vector<int>> uniquePerms(vector<int> &arr ,int n) {
+        vector<vector<int>> ans;
+        set<vector<int>> s;
+        
+        sort(arr.begin(), arr.end());
+        s.insert(arr);
+        
+        while(next_permutation(arr.begin(), arr.end())){
+            s.insert(arr);
+        }
+        
+        for(auto i:s){
+            ans.push_back(i);
+        }
+        return ans;    
+    }
+};
+
+/* ------------------------------------------------------------------------------------------------------------------------ */
+
+class Solution {
+  public:
   
     void uniquePermsHelper(int pos, int n, vector<int> &arr, vector<vector<int>> &ans){
         // If we have traversed entire arr[], we have got an Unique Permutation this push it into the ans
@@ -31,22 +53,6 @@ class Solution {
 
 
     vector<vector<int>> uniquePerms(vector<int> &arr ,int n) {
-        // vector<vector<int>> ans;
-        // set<vector<int>> s;
-        
-        // sort(arr.begin(), arr.end());
-        // s.insert(arr);
-        
-        // while(next_permutation(arr.begin(), arr.end())){
-        //     s.insert(arr);
-        // }
-        
-        // for(auto i:s){
-        //     ans.push_back(i);
-        // }
-        // return ans;
-        
-         
         vector<vector<int>> ans;
     
         uniquePermsHelper(0, n, arr, ans);

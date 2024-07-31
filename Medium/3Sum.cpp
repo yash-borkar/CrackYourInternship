@@ -3,42 +3,54 @@ https://leetcode.com/problems/3sum/description/
 class Solution {
 public:
     vector<vector<int>> threeSum(vector<int>& nums) {
-        // set<vector<int>> ans;
-        // int n = nums.size();
+        set<vector<int>> ans;
+        int n = nums.size();
 
-        // for(int i=0; i<n; i++){
-        //     for(int j=i+1; j<n; j++){
-        //         for(int k=j+1; k<n; k++){
-        //             if(nums[i]+nums[j]+nums[k] == 0){
-        //                 vector<int>triplet = {nums[i], nums[j], nums[k]};
-        //                 sort(triplet.begin(), triplet.end());
-        //                 ans.insert(triplet);
-        //             }
-        //         }
-        //     }   
-        // }
-        // vector<vector<int>> finalAns(ans.begin(), ans.end());
-        // return finalAns;
+        for(int i=0; i<n; i++){
+            for(int j=i+1; j<n; j++){
+                for(int k=j+1; k<n; k++){
+                    if(nums[i]+nums[j]+nums[k] == 0){
+                        vector<int>triplet = {nums[i], nums[j], nums[k]};
+                        sort(triplet.begin(), triplet.end());
+                        ans.insert(triplet);
+                    }
+                }
+            }   
+        }
+        vector<vector<int>> finalAns(ans.begin(), ans.end());
+        return finalAns;
+    }
+};
 
+/* ------------------------------------------------------------------------------------------------------------------------ */
 
-        // set<vector<int>> ans;
-        // int n = nums.size();
-        // // for(int i=0; i<n; i++){
-        // //     set<int> hashset;
-        // //     for(int j=i+1; j<n; j++){
-        // //         int third = -(nums[i] + nums[j]);
-        // //         if(hashset.find(third) != hashset.end()){
-        // //             vector<int>triplet = {nums[i], nums[j], third};
-        // //             sort(triplet.begin(), triplet.end());
-        // //             ans.insert(triplet);
-        // //         }
-        // //         hashset.insert(nums[j]);
-        // //     }
-        // // }
-        // vector<vector<int>> finalAns(ans.begin(), ans.end());
-        // return finalAns;
+class Solution {
+public:
+    vector<vector<int>> threeSum(vector<int>& nums) {
+        set<vector<int>> ans;
+        int n = nums.size();
+        for(int i=0; i<n; i++){
+            set<int> hashset;
+            for(int j=i+1; j<n; j++){
+                int third = -(nums[i] + nums[j]);
+                if(hashset.find(third) != hashset.end()){
+                    vector<int>triplet = {nums[i], nums[j], third};
+                    sort(triplet.begin(), triplet.end());
+                    ans.insert(triplet);
+                }
+                hashset.insert(nums[j]);
+            }
+        }
+        vector<vector<int>> finalAns(ans.begin(), ans.end());
+        return finalAns;
+    }
+};
 
+/* ------------------------------------------------------------------------------------------------------------------------ */
 
+class Solution {
+public:
+    vector<vector<int>> threeSum(vector<int>& nums) {
         int n = nums.size();
         vector<vector<int>> ans;
         sort(nums.begin(), nums.end());
@@ -61,7 +73,6 @@ public:
                 }
             }
         }
-
         return ans;
     }
 };

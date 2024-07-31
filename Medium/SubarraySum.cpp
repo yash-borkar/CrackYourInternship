@@ -18,8 +18,7 @@ public:
             if(prefix[i] == k) ans++;      
             if(mp.find(prefix[i] - k) != mp.end()) ans+=mp[prefix[i]-k];        
             mp[prefix[i]]++; 
-        }
-        
+        }      
         return ans; 
     }
 };
